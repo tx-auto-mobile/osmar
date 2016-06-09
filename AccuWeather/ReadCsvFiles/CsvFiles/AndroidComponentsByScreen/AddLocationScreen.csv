@@ -1,0 +1,10 @@
+Element,Id,Class,Xpath
+addLocationScreen,com.accuweather.android:id/overlay,null,null
+backButton,com.accuweather.android:id/back_arrow,null,null
+searchButton,android:id/search_mag_icon,null,null
+searchTextField,android:id/search_src_text,null,null
+searchList,com.accuweather.android:id/locations_search_results,null,null
+closeButton,android:id/search_close_btn,null,null
+elementSearched,null,android.widget.RelativeLayout,//android.widget.ListView[@resource-id='com.accuweather.android:id/locations_search_results']//android.widget.RelativeLayout
+elementSearchedName,com.accuweather.android:id/location_search_name,null,null
+elementSearchedCountry,com.accuweather.android:id/location_search_country,null,null

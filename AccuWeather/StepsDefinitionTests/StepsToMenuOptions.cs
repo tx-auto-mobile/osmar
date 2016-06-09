@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.MultiTouch;
+using ReadCsvFiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,35 +14,59 @@ namespace StepsDefinitionTests
     public class StepsToMenuOptions
     {
         AppiumDriver<IWebElement> driver;
-        static string menu_pane_id = "com.accuweather.android:id/drawer";
+        ReadCsvs read_data;
 
-        static string menu_button_path = "//android.view.View[@resource-id='com.accuweather.android:id/tool_bar']//android.widget.ImageButton[@index=0]";
+        string menu_pane_id;// = "com.accuweather.android:id/drawer";
 
-        static string menu_options_list_id = "com.accuweather.android:id/location_list";
-        static string menu_options_edit_icon = "com.accuweather.android:id/edit_icon";
-        static string menu_options_edit_label = "com.accuweather.android:id/location_edit_text";
-        static string menu_options_add_icon= "com.accuweather.android:id/add_icon";
-        static string menu_options_add_label = "com.accuweather.android:id/location_add_text";
+        string menu_button_xpath;// = "//android.view.View[@resource-id='com.accuweather.android:id/tool_bar']//android.widget.ImageButton[@index=0]";
 
-        static string list_location_id = "com.accuweather.android:id/current_conditions_ripple";
-        static string list_selection_bar_id = "com.accuweather.android:id/selection_bar";
+        string menu_options_list_id;// = "com.accuweather.android:id/location_list";
+        string menu_options_edit_icon_id;// = "com.accuweather.android:id/edit_icon";
+        string menu_options_edit_label_id;// = "com.accuweather.android:id/location_edit_text";
+        string menu_options_add_icon_id;//= "com.accuweather.android:id/add_icon";
+        string menu_options_add_label_id;// = "com.accuweather.android:id/location_add_text";
 
-        static string tool_bar_id = "com.accuweather.android:id/tool_bar";
-        static string menu_button_class = "android.widget.ImageButton";
+        string list_location_id;// = "com.accuweather.android:id/current_conditions_ripple";
+        string list_selection_bar_id;// = "com.accuweather.android:id/selection_bar";
+
+        string tool_bar_id;// = "com.accuweather.android:id/tool_bar";
+        string menu_button_class;// = "android.widget.ImageButton";
 
 
-        static string list_location_name_id = "com.accuweather.android:id/location_name";
-        static string list_location_whether_icon_id = "com.accuweather.android:id/weather_icon";
-        static string list_location_temp_id = "com.accuweather.android:id/current_temp";
+        string list_location_name_id;// = "com.accuweather.android:id/location_name";
+        string list_location_whether_icon_id;// = "com.accuweather.android:id/weather_icon";
+        string list_location_temp_id;// = "com.accuweather.android:id/current_temp";
 
-        //complete with the index
-        static string list_location_path = "//android.view.View[@resource-id='com.accuweather.android:id/tool_bar']//android.widget.ImageButton[@index=0]";
-
+       
 
 
         public StepsToMenuOptions(AppiumDriver<IWebElement> driver)
         {
             this.driver = driver;
+            read_data = new ReadCsvs();
+
+            Dictionary<string, Dictionary<string, string>> screenComponents = read_data.read_android_components("menuOptionsScreen");
+
+            this.menu_pane_id = screenComponents["ids"]["menuPane"];
+
+            this.menu_button_xpath = screenComponents["xpaths"]["menuButton"];
+
+            this.menu_options_list_id = screenComponents["ids"]["menuOptionsList"];
+            this.menu_options_edit_icon_id = screenComponents["ids"]["editIcon"];
+            this.menu_options_edit_label_id = screenComponents["ids"]["editLabel"];
+            this.menu_options_add_icon_id = screenComponents["ids"]["addIcon"];
+            this.menu_options_add_label_id = screenComponents["ids"]["addLabel"];
+
+            this.list_location_id = screenComponents["ids"]["location"];
+            this.list_selection_bar_id = screenComponents["ids"]["selectionBar"];
+
+            this.tool_bar_id = screenComponents["ids"]["toolBar"];
+            this.menu_button_class = screenComponents["classes"]["menuButton"];
+
+
+            this.list_location_name_id = screenComponents["ids"]["locationName"];
+            this.list_location_whether_icon_id = screenComponents["ids"]["locationWhetherIcon"];
+            this.list_location_temp_id = screenComponents["ids"]["locationTemp"];
         }
 
         public bool verify_menu_displayed()
@@ -78,7 +103,7 @@ namespace StepsDefinitionTests
 
         public bool verify_element_displayed_localization_by_path(string element)
         {
-            string path_element = element.ToLower().Equals("menu") ? menu_button_path
+            string path_element = element.ToLower().Equals("menu") ? menu_button_xpath
                              : "";
             try
             {
@@ -96,10 +121,10 @@ namespace StepsDefinitionTests
         public bool verify_element_displayed_menu_by_id(string element)
         {
             string id_element = element.ToLower().Equals("list") ? menu_options_list_id
-                             : element.ToLower().Equals("addicon") ? menu_options_add_icon
-                             : element.ToLower().Equals("addlabel") ? menu_options_add_label
-                             : element.ToLower().Equals("editicon") ? menu_options_edit_icon
-                             : menu_options_edit_label;
+                             : element.ToLower().Equals("addicon") ? menu_options_add_icon_id
+                             : element.ToLower().Equals("addlabel") ? menu_options_add_label_id
+                             : element.ToLower().Equals("editicon") ? menu_options_edit_icon_id
+                             : menu_options_edit_label_id;
 
             try
             {
@@ -113,10 +138,10 @@ namespace StepsDefinitionTests
         public string get_element_text_menu_by_id(string element)
         {
             string id_element = element.ToLower().Equals("list") ? menu_options_list_id
-                             : element.ToLower().Equals("addicon") ? menu_options_add_icon
-                             : element.ToLower().Equals("addlabel") ? menu_options_add_label
-                             : element.ToLower().Equals("editicon") ? menu_options_edit_icon
-                             : menu_options_edit_label;
+                             : element.ToLower().Equals("addicon") ? menu_options_add_icon_id
+                             : element.ToLower().Equals("addlabel") ? menu_options_add_label_id
+                             : element.ToLower().Equals("editicon") ? menu_options_edit_icon_id
+                             : menu_options_edit_label_id;
 
             try
             {
@@ -132,7 +157,7 @@ namespace StepsDefinitionTests
         {
             try
             {
-                if (verify_element_displayed_tool_bar_by_class(menu_button_path))
+                if (verify_element_displayed_tool_bar_by_class(menu_button_xpath))
                 {
                     driver.FindElementById(tool_bar_id).FindElement(By.ClassName(menu_button_class)).Click();
                     return true;
@@ -174,12 +199,12 @@ namespace StepsDefinitionTests
             {
                 if (verify_element_displayed_menu_by_id("addIcon"))
                 {
-                    driver.FindElement(By.Id(menu_options_add_icon)).Click();
+                    driver.FindElement(By.Id(menu_options_add_icon_id)).Click();
                     return true;
                 }
                 else if (verify_element_displayed_menu_by_id("addLabel"))
                 {
-                    driver.FindElement(By.Id(menu_options_add_label)).Click();
+                    driver.FindElement(By.Id(menu_options_add_label_id)).Click();
                     return true;
                 }
                 else
@@ -201,12 +226,12 @@ namespace StepsDefinitionTests
             {
                 if (verify_element_displayed_menu_by_id("editIcon"))
                 {
-                    driver.FindElement(By.Id(menu_options_edit_icon)).Click();
+                    driver.FindElement(By.Id(menu_options_edit_icon_id)).Click();
                     return true;
                 }
                 else if (verify_element_displayed_menu_by_id("editLabel"))
                 {
-                    driver.FindElement(By.Id(menu_options_edit_label)).Click();
+                    driver.FindElement(By.Id(menu_options_edit_label_id)).Click();
                     return true;
                 }
                 else

@@ -23,13 +23,14 @@ namespace AccuWeather
         StepsToTermsAndConditions stepTermConditions;
         StepsToMenuOptions stepMenuOptions;
         StepsToAddLocation stepAddLocation;
-        static string appActivityMainScreen = "com.accuweather.app.MainActivity";
+        string appActivityMainScreen;// = "com.accuweather.app.MainActivity";
 
         [SetUp]
         public void setUp()
         {
             String testCaseName = TestContext.CurrentContext.Test.Name;
-
+            readCsv = new ReadCsvs();
+            appActivityMainScreen= readCsv.read_android_activities()["main"];
 
             stepSetUpDevice = new StepsToSetUpDevice();
             driver = stepSetUpDevice.run_driver_with_install(testCaseName, appActivityMainScreen);

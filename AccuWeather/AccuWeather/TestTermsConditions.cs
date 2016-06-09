@@ -20,13 +20,15 @@ namespace AccuWeather
         ReadCsvs readCsv;
         StepsToSetUpDevice stepSetUpDevice;
         StepsToTermsAndConditions stepTermConditions;
-        static string appActivityTermsConditions = "com.accuweather.app.SplashScreen";
+        string appActivityTermsConditions;// = "com.accuweather.app.SplashScreen";
 
 
         [SetUp]
         public void setUp()
         {
             String testCaseName = TestContext.CurrentContext.Test.Name;
+            readCsv = new ReadCsvs();
+            appActivityTermsConditions = readCsv.read_android_activities()["termAndConditions"];
 
 
             stepSetUpDevice = new StepsToSetUpDevice();

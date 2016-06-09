@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
+using ReadCsvFiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,25 +12,44 @@ namespace StepsDefinitionTests
     public class StepsToTermsAndConditions
     {
         AppiumDriver<IWebElement> driver;
-        static string title_id_term = "android:id/alertTitle";
-        static string message_id_term = "android:id/message";
-        static string agree_id_term = "android:id/button1";
-        static string disagree_id_term = "android:id/button2";
+        ReadCsvs read_data;
 
-        static string title_id_well= "android:id/alertTitle";
-        static string message_id_well = "android:id/message";
-        static string go_id_well = "android:id/button1";
+        string title_id_term;// = "android:id/alertTitle";
+        string message_id_term;// = "android:id/message";
+        string agree_id_term;// = "android:id/button1";
+        string disagree_id_term;// = "android:id/button2";
+
+        string title_id_well;//= "android:id/alertTitle";
+        string message_id_well;// = "android:id/message";
+        string go_id_well;// = "android:id/button1";
+
+
+        string element_menu;// = "com.accuweather.android:id/location_list";
+
+        string allow_localization_id;// = "com.android.packageinstaller:id/permission_allow_button";
 
         static string app = "com.accuweather.android";
-
-        static string element_menu = "com.accuweather.android:id/location_list";
-
-        static string allow_localization_id = "com.android.packageinstaller:id/permission_allow_button";
 
 
         public StepsToTermsAndConditions(AppiumDriver<IWebElement> driver)
         {
             this.driver = driver;
+            read_data = new ReadCsvs();
+
+            Dictionary<string, Dictionary<string, string>> screenComponents = read_data.read_android_components("termAndConditionsScreen");
+
+            this.title_id_term = screenComponents["ids"]["titleTermAndConditions"];
+
+            this.message_id_term = screenComponents["ids"]["messageTermAndConditions"];
+            this.agree_id_term = screenComponents["ids"]["agreeButtonTermAndConditions"];
+            this.disagree_id_term = screenComponents["ids"]["rejectButtonTermAndConditions"];
+
+            this.title_id_well = screenComponents["ids"]["titleWellcome"];
+            this.message_id_well = screenComponents["ids"]["messageWellcome"];
+            this.go_id_well = screenComponents["ids"]["gobuttonWellcome"];
+
+            this.element_menu = screenComponents["ids"]["menuLocationList"];
+            this.allow_localization_id = screenComponents["ids"]["allowButtonLocalizationPermission"];
 
         }
 

@@ -27,7 +27,8 @@ namespace ConsoleApplication1
             */
 
             ReadCsvs x = new ReadCsvs();
-                        List<string> parsedData = x.readCapabilities();
+           // Dictionary<string, Dictionary<string, string>> parsedData = x.read_android_components("addLocationScreen");
+            List<string> parsedData = x.readCapabilities();
                         for (int i = 0; i < parsedData.Count; i++)
                         {
                             System.Console.WriteLine(parsedData[i]);

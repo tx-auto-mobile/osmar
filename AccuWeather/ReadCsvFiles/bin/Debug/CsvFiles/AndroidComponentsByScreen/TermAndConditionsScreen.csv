@@ -1,0 +1,10 @@
+Element,Id,Class,Xpath
+titleTermAndConditions,android:id/alertTitle,null,null
+messageTermAndConditions,android:id/message,null,null
+agreeButtonTermAndConditions,android:id/button1,null,null
+rejectButtonTermAndConditions,android:id/button2,null,null
+titleWellcome,android:id/alertTitle,null,null
+messageWellcome,android:id/message,null,null
+gobuttonWellcome,android:id/button1,null,null
+menuLocationList,com.accuweather.android:id/location_list,null,null
+allowButtonLocalizationPermission,"com.android.packageinstaller:id/permission_allow_button""",null,null

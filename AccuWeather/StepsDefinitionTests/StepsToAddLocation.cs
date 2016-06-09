@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.MultiTouch;
+using ReadCsvFiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,25 +14,41 @@ namespace StepsDefinitionTests
     public class StepsToAddLocation
     {
         AppiumDriver<IWebElement> driver;
+        ReadCsvs read_data;
 
-        static string add_location_screen_id = "com.accuweather.android:id/overlay";
+        string add_location_screen_id;// = "com.accuweather.android:id/overlay";
 
-        static string button_back_id = "com.accuweather.android:id/back_arrow";
-        static string button_search_id = "android:id/search_mag_icon";
-        static string text_field_search_id = "android:id/search_src_text";
-        static string search_list_id= "com.accuweather.android:id/locations_search_results";
-        static string button_close_id = "android:id/search_close_btn";
+        string button_back_id;// = "com.accuweather.android:id/back_arrow";
+        string button_search_id;// = "android:id/search_mag_icon";
+        string text_field_search_id;// = "android:id/search_src_text";
+        string search_list_id;//= "com.accuweather.android:id/locations_search_results";
+        string button_close_id;// = "android:id/search_close_btn";
         //need to complete the index
-        static string element_searched_path = "//android.widget.ListView[@resource-id='com.accuweather.android:id/locations_search_results']//android.widget.RelativeLayout";//[@index=0]";
-        static string element_searched_class = "android.widget.RelativeLayout";
+        string element_searched_path;// = "//android.widget.ListView[@resource-id='com.accuweather.android:id/locations_search_results']//android.widget.RelativeLayout";//[@index=0]";
+        string element_searched_class;// = "android.widget.RelativeLayout";
 
-        static string element_searched_location_name_id = "com.accuweather.android:id/location_search_name";
-        static string element_searched_location_country_id = "com.accuweather.android:id/location_search_country";
+        string element_searched_location_name_id;// = "com.accuweather.android:id/location_search_name";
+        string element_searched_location_country_id;// = "com.accuweather.android:id/location_search_country";
 
-      
+
         public StepsToAddLocation(AppiumDriver<IWebElement> driver)
         {
             this.driver = driver;
+            read_data = new ReadCsvs();
+            
+            Dictionary<string, Dictionary<string, string>> screenComponents = read_data.read_android_components("addLocationScreen");
+            this.add_location_screen_id = screenComponents["ids"]["addLocationScreen"];
+
+            this.button_back_id = screenComponents["ids"]["backButton"];
+            this.button_search_id = screenComponents["ids"]["searchButton"];
+            this.text_field_search_id = screenComponents["ids"]["searchTextField"];
+            this.search_list_id = screenComponents["ids"]["searchList"];
+            this.button_close_id = screenComponents["ids"]["closeButton"];
+            this.element_searched_path = screenComponents["xpaths"]["elementSearched"];
+            this.element_searched_class = screenComponents["classes"]["elementSearched"];
+            this.element_searched_location_name_id = screenComponents["ids"]["elementSearchedName"];
+            this.element_searched_location_country_id = screenComponents["ids"]["elementSearchedCountry"];
+            
         }
 
         public bool verify_add_location_screen_displayed()

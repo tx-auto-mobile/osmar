@@ -28,6 +28,7 @@ namespace StepsDefinitionTests
 
         private string server;
         private string port;
+        private string appPackage;
 
 
 
@@ -48,11 +49,15 @@ namespace StepsDefinitionTests
             this.sauceLabs = documentCapabilities[6].ToLower();
             this.appiumVersion = documentCapabilities[7];
 
+            this.appPackage = documentCapabilities[8];
+
             this.username = sauceLabsConfiguration[0];
             this.key = sauceLabsConfiguration[1];
 
             this.server = appiumConfiguration[0];
             this.port = appiumConfiguration[1];
+
+            
 
         }
 
@@ -93,7 +98,7 @@ namespace StepsDefinitionTests
                 }
             }
 
-            cap.SetCapability("appPackage", "com.accuweather.android");
+            cap.SetCapability("appPackage", appPackage);
             cap.SetCapability("appActivity", appActivity);
             driver = new AndroidDriver<IWebElement>(new Uri("http://" + server + ":" + port + "/wd/hub"), cap, TimeSpan.FromSeconds(600));
 

@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.MultiTouch;
+using ReadCsvFiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,22 +15,46 @@ namespace StepsDefinitionTests
     {
        
         AppiumDriver<IWebElement> driver;
-        static string label_title_id = "com.accuweather.android:id/title";
-        static string label_subtitle_id = "com.accuweather.android:id/subtitle";
-        static string button_toogle_id = "com.accuweather.android:id/toggle";
-        static string edit_list_id = "com.accuweather.android:id/locations_edit_list";
-        static string location_class = "android.widget.RelativeLayout";
+        ReadCsvs read_data;
 
-        static string button_back_tool_bar_xpath = "//android.view.View[@resource-id='com.accuweather.android:id/locations_edit_top_toolbar']//android.widget.ImageButton[@index=0]";
-        static string label_title_tool_bar_xpath = "//android.view.View[@resource-id='com.accuweather.android:id/locations_edit_top_toolbar']//android.widget.TextView[@index=1]";
+        string tool_bar_edit_id;// = "com.accuweather.android:id/locations_edit_top_toolbar";
+        string button_back_tool_bar_class;// = "android.widget.ImageButton";
+        string label_title_tool_bar_class;// = "android.widget.TextView";
 
-        static string tool_bar_edit_id = "com.accuweather.android:id/locations_edit_top_toolbar";
-        static string button_back_tool_bar_class = "android.widget.ImageButton";
-        static string label_title_tool_bar_class = "android.widget.TextView";
+        string button_back_tool_bar_xpath;// = "//android.view.View[@resource-id='com.accuweather.android:id/locations_edit_top_toolbar']//android.widget.ImageButton[@index=0]";
+        string label_title_tool_bar_xpath;// = "//android.view.View[@resource-id='com.accuweather.android:id/locations_edit_top_toolbar']//android.widget.TextView[@index=1]";
+
+
+        string label_title_id;// = "com.accuweather.android:id/title";
+        string label_subtitle_id;// = "com.accuweather.android:id/subtitle";
+        string button_toogle_id;// = "com.accuweather.android:id/toggle";
+        string edit_list_id;// = "com.accuweather.android:id/locations_edit_list";
+        string location_class;// = "android.widget.RelativeLayout";
+
+
+
 
         public StepsToEditLocation(AppiumDriver<IWebElement> driver)
         {
             this.driver = driver;
+
+            read_data = new ReadCsvs();
+
+            Dictionary<string, Dictionary<string, string>> screenComponents = read_data.read_android_components("editLocationScreen");
+           
+            this.tool_bar_edit_id = screenComponents["ids"]["toolBarEdit"];
+            this.button_back_tool_bar_class = screenComponents["classes"]["backButton"];
+            this.label_title_tool_bar_class = screenComponents["classes"]["titleLabelToolBar"];
+
+            this.button_back_tool_bar_xpath = screenComponents["xpaths"]["backButton"];
+            this.label_title_tool_bar_xpath = screenComponents["xpaths"]["titleLabelToolBar"];
+
+
+            this.label_title_id = screenComponents["ids"]["titlelabelLocationToEdit"];
+            this.label_subtitle_id = screenComponents["ids"]["subtitlelabelLocationToEdit"];
+            this.button_toogle_id = screenComponents["ids"]["toogleButtonLocationToEdit"];
+            this.edit_list_id = screenComponents["ids"]["editListLocations"];
+            this.location_class = screenComponents["classes"]["locationToEdit"];
         }
 
         public bool verify_element_displayed_edit_location_screen_by_id(string element)

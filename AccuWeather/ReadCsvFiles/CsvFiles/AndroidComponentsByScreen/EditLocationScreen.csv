@@ -1,0 +1,9 @@
+Element,Id,Class,Xpath
+toolBarEdit,com.accuweather.android:id/locations_edit_top_toolbar,null,null
+backButton,null,android.widget.ImageButton,//android.view.View[@resource-id='com.accuweather.android:id/locations_edit_top_toolbar']//android.widget.ImageButton[@index=0]
+titleLabelToolBar,null,android.widget.TextView,//android.view.View[@resource-id='com.accuweather.android:id/locations_edit_top_toolbar']//android.widget.TextView[@index=1]
+titlelabelLocationToEdit,com.accuweather.android:id/title,null,null
+subtitlelabelLocationToEdit,com.accuweather.android:id/subtitle,null,null
+toogleButtonLocationToEdit,com.accuweather.android:id/toggle,null,null
+editListLocations,com.accuweather.android:id/locations_edit_list,null,null
+locationToEdit,null,android.widget.RelativeLayout,null

@@ -45,13 +45,28 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="CsvFiles\AppiumConfiguration.csv">
+    <None Include="CsvFiles\AndroidActivities\Activities.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="CsvFiles\Capabilities.csv">
+    <None Include="CsvFiles\AndroidComponentsByScreen\AddLocationScreen.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="CsvFiles\SauceLabsConfiguration.csv">
+    <None Include="CsvFiles\AndroidComponentsByScreen\EditLocationScreen.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CsvFiles\AndroidComponentsByScreen\MenuOptionsScreen.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CsvFiles\AndroidComponentsByScreen\TermAndConditionsScreen.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CsvFiles\Configurations\AppiumConfiguration.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CsvFiles\Configurations\Capabilities.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CsvFiles\Configurations\SauceLabsConfiguration.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
