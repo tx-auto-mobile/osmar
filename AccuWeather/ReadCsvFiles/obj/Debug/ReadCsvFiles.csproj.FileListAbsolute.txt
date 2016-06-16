@@ -8,5 +8,6 @@ C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\bin\Debug\CsvF
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\Configurations\SauceLabsConfiguration.csv
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\bin\Debug\ReadCsvFiles.dll
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\bin\Debug\ReadCsvFiles.pdb
+C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.csprojResolveAssemblyReference.cache
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.dll
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.pdb

@@ -16,6 +16,8 @@ using NUnit.Framework.Interfaces;
 namespace AccuWeather
 {
     [TestFixture]
+    [Parallelizable]
+    [Category("EditLocation")]
     class TestEditLocation
     {
         static string allowChars = "a,e,i,o,u,c,s,d,u,b"; 

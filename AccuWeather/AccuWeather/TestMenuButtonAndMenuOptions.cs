@@ -18,6 +18,8 @@ namespace AccuWeather
 {
 
     [TestFixture]
+    [Parallelizable]
+    [Category("MenuButtonAndOptions")]
     public class TestMenuButtonAndMenuOptions
     {
         AppiumDriver<IWebElement> driver;
@@ -49,6 +51,7 @@ namespace AccuWeather
         
 
         [Test]
+       // [Property("Priority","1")]
         [TestCase("list", "")]
         [TestCase("addIcon", "")]
         [TestCase("addLabel", "Add Location")]

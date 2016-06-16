@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="0" result="Failed" label="Invalid" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.2.1.0" clr-version="4.0.30319.42000" start-time="2016-06-15 19:22:14Z" end-time="2016-06-15 19:22:14Z" duration="0.034934">
+  <command-line><![CDATA["C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\packages\NUnit.ConsoleRunner.3.2.1\tools\nunit3-console.exe" 1]]></command-line>
+  <test-suite type="Assembly" id="0-1" name="1" fullname="C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\bin\Debug\1" testcasecount="0" runstate="NotRunnable" result="Failed" label="Invalid">
+    <properties>
+      <property name="_SKIPREASON" value="File not found: C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\bin\Debug\1" />
+    </properties>
+    <reason>
+      <message>File not found: C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\bin\Debug\1</message>
+    </reason>
+  </test-suite>
+</test-run>

@@ -14,6 +14,8 @@ namespace AccuWeather
 {
     
     [TestFixture]
+    [Parallelizable]
+    [Category("TermsAndConditions")]
     public class TestTermsConditions
     {
         AppiumDriver<IWebElement> driver;

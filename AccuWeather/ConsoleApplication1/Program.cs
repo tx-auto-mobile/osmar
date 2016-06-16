@@ -1,41 +1,45 @@
-﻿using ReadCsvFiles;
+﻿// ***********************************************************************
+// Copyright (c) 2015 Charlie Poole
+//
+// Permission is hereby granted, free of charge, to any person obtaining
+// a copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject to
+// the following conditions:
+// 
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+// LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+// OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// ***********************************************************************
+
+using NUnit.Common;
+using NUnitLite;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace NUnitLite.Tests
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
-
+        /// <summary>
+        /// The main program executes the tests. Output may be routed to
+        /// various locations, depending on the arguments passed.
+        /// </summary>
+        /// <remarks>Run with --help for a full list of arguments supported</remarks>
+        /// <param name="args"></param>
+        public static int Main(string[] args)
         {
-            /*
-             string path = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
-             string path1 = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
-             string path2 = new DirectoryInfo(Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"))).Parent.FullName;
-             string path3 = Path.Combine(Environment.CurrentDirectory, @"Data\", "osmar.txt");
-
-  
-     string path4 = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location)+ @"\Debug\CsvFiles\Capabilities.csv";
-          
-            */
-
-            ReadCsvs x = new ReadCsvs();
-           // Dictionary<string, Dictionary<string, string>> parsedData = x.read_android_components("addLocationScreen");
-            List<string> parsedData = x.readCapabilities();
-                        for (int i = 0; i < parsedData.Count; i++)
-                        {
-                            System.Console.WriteLine(parsedData[i]);
-                        }
-                  
-
-            Console.ReadKey();
+            return new AutoRun().Execute(args);
+            //return new AutoRun(typeof(Program).GetTypeInfo().Assembly).Execute(args, new ExtendedTextWrapper(Console.Out), Console.In);
         }
     }
 }

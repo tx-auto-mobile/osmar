@@ -1,0 +1,3 @@
+Screen,Activity
+termAndConditions,com.accuweather.app.SplashScreen
+main,com.accuweather.app.MainActivity

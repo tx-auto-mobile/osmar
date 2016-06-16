@@ -1,0 +1,14 @@
+Element,Id,Class,Xpath
+menuPane,com.accuweather.android:id/drawer,null,null
+menuButton,null,android.widget.ImageButton,//android.view.View[@resource-id='com.accuweather.android:id/tool_bar']//android.widget.ImageButton[@index=0]
+menuOptionsList,com.accuweather.android:id/location_list,null,null
+editIcon,com.accuweather.android:id/edit_icon,null,null
+editLabel,com.accuweather.android:id/location_edit_text,null,null
+addIcon,com.accuweather.android:id/add_icon,null,null
+addLabel,com.accuweather.android:id/location_add_text,null,null
+location,com.accuweather.android:id/current_conditions_ripple,null,null
+selectionBar,com.accuweather.android:id/selection_bar,null,null
+toolBar,com.accuweather.android:id/tool_bar,null,null
+locationName,com.accuweather.android:id/location_name,null,null
+locationWhetherIcon,com.accuweather.android:id/weather_icon,null,null
+locationTemp,com.accuweather.android:id/current_temp,null,null

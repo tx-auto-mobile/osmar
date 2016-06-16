@@ -15,6 +15,8 @@ using NUnit.Framework.Interfaces;
 namespace AccuWeather
 {
     [TestFixture]
+    [Parallelizable]
+    [Category("AddLocation")]
     class TestAddLocation
     {
         AppiumDriver<IWebElement> driver;
@@ -57,6 +59,7 @@ namespace AccuWeather
             Assert.That(stepMenuOptions.verify_menu_displayed(), Is.True, "Previous screen is not displayed after touching Back button from Add Location screen");
 
         }
+        
 
         [Test]
         [TestCase("Santa")]
@@ -168,7 +171,7 @@ namespace AccuWeather
         }
 
 
-
+    
 
         [TearDown]
         public void cleanUp()
