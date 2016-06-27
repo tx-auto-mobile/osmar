@@ -30,28 +30,46 @@ namespace AccuWeather
         StepsToAddLocation stepAddLocation;
         StepsToEditLocation stepEditLocation;
         string appActivityMainScreen;// = "com.accuweather.app.MainActivity";
+        string sauceLabs;
 
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            readCsv = new ReadCsvs();
+            stepSetUpDevice = new StepsToSetUpDevice();
+            appActivityMainScreen = readCsv.read_android_activities()["main"];
+            sauceLabs = readCsv.readCapabilities()[6].ToLower();
 
+            if (sauceLabs.Equals("no"))
+            {
+                driver = stepSetUpDevice.run_driver_with_install_one_time("", appActivityMainScreen);
+                driver.Quit();
+
+            }
+        }
 
         [SetUp]
         public void setUp()
         {
             String testCaseName = TestContext.CurrentContext.Test.Name;
-            readCsv = new ReadCsvs();
-            appActivityMainScreen = readCsv.read_android_activities()["main"];
+            if (sauceLabs.Equals("yes"))
+            {
+                driver = stepSetUpDevice.run_driver_with_install_every_time(testCaseName, appActivityMainScreen);
+            }
+            else
+            {
+                driver = stepSetUpDevice.run_driver_without_install(testCaseName, appActivityMainScreen);
+            }
 
-            stepSetUpDevice = new StepsToSetUpDevice();
-            driver = stepSetUpDevice.run_driver_with_install(testCaseName, appActivityMainScreen);
             stepTermConditions = new StepsToTermsAndConditions(driver);
-            //stepTermConditions.accept_termns_and_conditions();
             stepMenuOptions = new StepsToMenuOptions(driver);
             stepAddLocation = new StepsToAddLocation(driver);
             stepEditLocation = new StepsToEditLocation(driver);
         }
-        
+
 
         [Test]
-       // [Property("Priority","1")]
+        // [Property("Priority","1")]
         [TestCase("list", "")]
         [TestCase("addIcon", "")]
         [TestCase("addLabel", "Add Location")]
@@ -63,8 +81,8 @@ namespace AccuWeather
             {
                 stepMenuOptions.click_back_android_button();
             }
-           // driver.FindElementById("com.accuweather.android:id/tool_bar").FindElement(By.ClassName("android.widget.ImageButton")).Click();
-            Assert.That(stepMenuOptions.click_menu_button_by_class(),Is.True,"Menu button is not found");
+            // driver.FindElementById("com.accuweather.android:id/tool_bar").FindElement(By.ClassName("android.widget.ImageButton")).Click();
+            Assert.That(stepMenuOptions.click_menu_button_by_class(), Is.True, "Menu button is not found");
             Assert.That(stepMenuOptions.verify_element_displayed_menu_by_id(element), Is.True, element + " is not displayed in the menu");
             Assert.That(stepMenuOptions.get_element_text_menu_by_id(element), Is.EqualTo(expectedText), element + " is displayed with the incorrect text");
 
@@ -76,9 +94,9 @@ namespace AccuWeather
         {
             if (stepMenuOptions.verify_menu_displayed() == false)
             {
-                Assert.That(stepMenuOptions.click_menu_button_by_class(),Is.True,"Menu Button is not found");
+                Assert.That(stepMenuOptions.click_menu_button_by_class(), Is.True, "Menu Button is not found");
             }
-            Assert.That(stepMenuOptions.touch_outside_element_by_id(),Is.True,"Problems to touch outside of the Menu");
+            Assert.That(stepMenuOptions.touch_outside_element_by_id(), Is.True, "Problems to touch outside of the Menu");
             Assert.That(stepMenuOptions.verify_menu_displayed(), Is.False, "Menu is not closed after touching outside of menu");
 
 
@@ -87,7 +105,7 @@ namespace AccuWeather
         [TestCase("backButton", "")]
         [TestCase("searchbutton", "")]
         [TestCase("searchtextfield", "Search for city or location name")]
-        public void TC007_Menu_Add_Location_Screen_Open_with_CorrectContent_User_touch_Add_Location_Menu_Option(string element,string expectedText)
+        public void TC007_Menu_Add_Location_Screen_Open_with_CorrectContent_User_touch_Add_Location_Menu_Option(string element, string expectedText)
         {
             if (stepMenuOptions.verify_menu_displayed() == false)
             {
@@ -133,7 +151,7 @@ namespace AccuWeather
             }
             else
             {
-                Assert.False(false,"Type of search element provided is incorrect. Test was not completed");
+                Assert.False(false, "Type of search element provided is incorrect. Test was not completed");
             }
 
         }
@@ -150,15 +168,22 @@ namespace AccuWeather
             }
             catch
             {
+
                 driver.Quit();
+
             }
             finally
             {
-                // Terminates the remote webdriver session
                 driver.Quit();
             }
 
 
+        }
+
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            driver.Quit();
         }
 
     }

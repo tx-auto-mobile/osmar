@@ -38,3 +38,35 @@ C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\bin\Debug\Cast
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\obj\Debug\RunTestCases.csprojResolveAssemblyReference.cache
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\obj\Debug\RunTestCases.exe
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\RunTestCases\obj\Debug\RunTestCases.pdb
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\AndroidActivities\Activities.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\AndroidComponentsByScreen\AddLocationScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\AndroidComponentsByScreen\EditLocationScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\AndroidComponentsByScreen\MenuOptionsScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\AndroidComponentsByScreen\TermAndConditionsScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\Configurations\AppiumConfiguration.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\Configurations\Capabilities.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\CsvFiles\Configurations\SauceLabsConfiguration.csv
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\RunTestCases.exe.config
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\RunTestCases.exe
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\RunTestCases.pdb
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\AccuWeather.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\ReadCsvFiles.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\nunit.framework.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\appium-dotnet-driver.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\WebDriver.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\StepsDefinitionTests.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\Newtonsoft.Json.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\WebDriver.Support.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\Castle.Core.dll
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\AccuWeather.pdb
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\ReadCsvFiles.pdb
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\nunit.framework.xml
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\appium-dotnet-driver.xml
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\WebDriver.xml
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\StepsDefinitionTests.pdb
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\Newtonsoft.Json.xml
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\WebDriver.Support.xml
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\Castle.Core.xml
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\obj\Debug\RunTestCases.csprojResolveAssemblyReference.cache
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\obj\Debug\RunTestCases.exe
+D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\obj\Debug\RunTestCases.pdb

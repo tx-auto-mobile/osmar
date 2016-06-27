@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="32" result="Failed" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.2.1.0" clr-version="2.0.50727.5420" start-time="2016-06-24 20:56:31Z" end-time="2016-06-24 21:01:14Z" duration="283.089704">
+  <command-line><![CDATA["D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\nunit3-console.exe" AccuWeather.dll --where "cat == EditLocation" --work="Reports\20160624165539"]]></command-line>
+  <filter>
+    <cat>EditLocation</cat>
+  </filter>
+  <test-suite type="Assembly" id="0-1047" name="AccuWeather.dll" fullname="D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\AccuWeather.dll" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2016-06-24 20:56:31Z" end-time="2016-06-24 21:01:14Z" duration="282.782500" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.2.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug" machine-name="TXBOOGARCIA" user="osmar.garcia" user-domain="TRUEXTEND" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="WorkDirectory" value="Reports\20160624165539" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="_PID" value="6904" />
+      <property name="_APPDOMAIN" value="test-domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1048" name="AccuWeather" fullname="AccuWeather" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2016-06-24 20:56:32Z" end-time="2016-06-24 21:01:14Z" duration="282.686896" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties />
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1012" name="TestEditLocation" fullname="AccuWeather.TestEditLocation" classname="AccuWeather.TestEditLocation" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2016-06-24 20:56:32Z" end-time="2016-06-24 21:01:14Z" duration="282.662887" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <properties>
+          <property name="ParallelScope" value="Self" />
+          <property name="Category" value="EditLocation" />
+        </properties>
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="ParameterizedMethod" id="0-1015" name="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" fullname="AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2016-06-24 20:56:32Z" end-time="2016-06-24 21:01:14Z" duration="282.598528" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1013" name="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Edit&quot;)" fullname="AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Edit&quot;)" methodname="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" classname="AccuWeather.TestEditLocation" runstate="Runnable" seed="212386315" result="Failed" label="Error" start-time="2016-06-24 20:56:32Z" end-time="2016-06-24 20:58:47Z" duration="135.604001" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. ERROR The test with session id 7d526c3cfbe6422c9e95e6a187919532 has already finished, and can't receive further commands.
+You can learn more at https://saucelabs.com/jobs/7d526c3cfbe6422c9e95e6a187919532
+For help, please check https://wiki.saucelabs.com/display/DOCS/Common+Error+Messages
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Appium.Android.AndroidDriver`1..ctor(Uri remoteAddress, DesiredCapabilities desiredCapabilities, TimeSpan commandTimeout)
+   at StepsDefinitionTests.StepsToSetUpDevice.run_driver_with_install(String testName, String appActivity) in C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\StepsDefinitionTests\StepsToSetUpDevice.cs:line 103
+   at AccuWeather.TestEditLocation.setUp() in C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\AccuWeather\TestEditLocation.cs:line 44
+--TearDown
+   at AccuWeather.TestEditLocation.cleanUp() in C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\AccuWeather\TestEditLocation.cs:line 107]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1014" name="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Menu&quot;)" fullname="AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Menu&quot;)" methodname="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" classname="AccuWeather.TestEditLocation" runstate="Runnable" seed="963478164" result="Failed" label="Error" start-time="2016-06-24 20:58:47Z" end-time="2016-06-24 21:01:14Z" duration="146.976137" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. ERROR The test with session id 3c2dbd91ff8043a9849a73d3e64fab60 has already finished, and can't receive further commands.
+You can learn more at https://saucelabs.com/jobs/3c2dbd91ff8043a9849a73d3e64fab60
+For help, please check https://wiki.saucelabs.com/display/DOCS/Common+Error+Messages
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Appium.Android.AndroidDriver`1..ctor(Uri remoteAddress, DesiredCapabilities desiredCapabilities, TimeSpan commandTimeout)
+   at StepsDefinitionTests.StepsToSetUpDevice.run_driver_with_install(String testName, String appActivity) in C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\StepsDefinitionTests\StepsToSetUpDevice.cs:line 103
+   at AccuWeather.TestEditLocation.setUp() in C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\AccuWeather\TestEditLocation.cs:line 44
+--TearDown
+   at AccuWeather.TestEditLocation.cleanUp() in C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\AccuWeather\TestEditLocation.cs:line 107]]></stack-trace>
+            </failure>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

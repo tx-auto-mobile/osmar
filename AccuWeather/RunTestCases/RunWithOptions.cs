@@ -29,20 +29,20 @@ namespace RunTestCases
                 }
                 else if (option.ToLower().Equals("2"))
                 {
-                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == TermsAndConditions\" --work=\"Reports" + @"\" + timeStamp + "\"";
-                }
+                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == TermsAndConditions\" --work=\"Reports" + @"\" + timeStamp + "\" --wait";
+            }
                 else if (option.ToLower().Equals("3"))
                 {
-                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == MenuButtonAndOptions\" --work=\"Reports" + @"\" + timeStamp + "\"";
-                }
+                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == MenuButtonAndOptions\" --work=\"Reports" + @"\" + timeStamp + "\" --wait";
+            }
                 else if (option.ToLower().Equals("4"))
                 {
-                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == AddLocation\" --work=\"Reports" + @"\" + timeStamp + "\"";
-                }
+                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == AddLocation\" --work=\"Reports" + @"\" + timeStamp + "\" --wait";
+            }
                 else if (option.ToLower().Equals("5"))
                 {
-                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == EditLocation\" --work=\"Reports" + @"\" + timeStamp + "\"";
-                }
+                    nunit3Console.StartInfo.Arguments = "AccuWeather.dll --where \"cat == EditLocation\" --work=\"Reports" + @"\" + timeStamp + "\" --wait";
+            }
                 
                 else if (option.ToLower().Equals("6"))
                 {

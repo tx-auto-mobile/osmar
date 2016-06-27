@@ -61,7 +61,7 @@ namespace StepsDefinitionTests
 
         }
 
-        public AppiumDriver<IWebElement> run_driver_with_install(string testName, string appActivity)
+        public AppiumDriver<IWebElement> run_driver_with_install_every_time(string testName, string appActivity)
         {
             AppiumDriver<IWebElement> driver;
             DesiredCapabilities cap = new DesiredCapabilities();
@@ -106,6 +106,102 @@ namespace StepsDefinitionTests
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
 
            
+            return driver;
+        }
+        public AppiumDriver<IWebElement> run_driver_with_install_one_time(string testName, string appActivity)
+        {
+            AppiumDriver<IWebElement> driver;
+            DesiredCapabilities cap = new DesiredCapabilities();
+            cap.SetCapability("noReset", "true");
+            cap.SetCapability("fullReset", "false");
+            cap.SetCapability("name", testName);
+
+            if (real.Equals("yes"))
+            {
+                cap.SetCapability("platformName", plataform);
+                cap.SetCapability("deviceName", deviceName);
+                cap.SetCapability("platformVersion", plataformVersion);
+                cap.SetCapability("app", app);
+            }
+            else if (real.Equals("no"))
+            {
+                if (sauceLabs.Equals("no"))
+                {
+                    cap.SetCapability("platformName", plataform);
+                    cap.SetCapability("deviceName", deviceName);
+                    cap.SetCapability("udid", udid);
+                    cap.SetCapability("platformVersion", plataformVersion);
+                    cap.SetCapability("app", app);
+                }
+                else
+                {
+                    cap.SetCapability("deviceName", deviceName);
+                    cap.SetCapability("platformVersion", plataformVersion);
+                    cap.SetCapability("platformName", plataform);
+                    cap.SetCapability("app", app);
+                    cap.SetCapability("username", username);
+                    cap.SetCapability("accessKey", key);
+                    cap.SetCapability("appiumVersion", appiumVersion);
+                }
+            }
+
+            cap.SetCapability("appPackage", appPackage);
+            cap.SetCapability("appActivity", appActivity);
+            driver = new AndroidDriver<IWebElement>(new Uri("http://" + server + ":" + port + "/wd/hub"), cap, TimeSpan.FromSeconds(600));
+
+
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
+
+
+            return driver;
+        }
+
+
+        public AppiumDriver<IWebElement> run_driver_without_install(string testName, string appActivity)
+        {
+            AppiumDriver<IWebElement> driver;
+            DesiredCapabilities cap = new DesiredCapabilities();
+            cap.SetCapability("noReset", "true");
+            cap.SetCapability("fullReset", "false");
+            cap.SetCapability("name", testName);
+
+            if (real.Equals("yes"))
+            {
+                cap.SetCapability("platformName", plataform);
+                cap.SetCapability("deviceName", deviceName);
+                cap.SetCapability("platformVersion", plataformVersion);
+                //cap.SetCapability("app", app);
+            }
+            else if (real.Equals("no"))
+            {
+                if (sauceLabs.Equals("no"))
+                {
+                    cap.SetCapability("platformName", plataform);
+                    cap.SetCapability("deviceName", deviceName);
+                    cap.SetCapability("udid", udid);
+                    cap.SetCapability("platformVersion", plataformVersion);
+                    //cap.SetCapability("app", app);
+                }
+                else
+                {
+                    cap.SetCapability("deviceName", deviceName);
+                    cap.SetCapability("platformVersion", plataformVersion);
+                    cap.SetCapability("platformName", plataform);
+                    //cap.SetCapability("app", app);
+                    cap.SetCapability("username", username);
+                    cap.SetCapability("accessKey", key);
+                    cap.SetCapability("appiumVersion", appiumVersion);
+                }
+            }
+
+            cap.SetCapability("appPackage", appPackage);
+            cap.SetCapability("appActivity", appActivity);
+            driver = new AndroidDriver<IWebElement>(new Uri("http://" + server + ":" + port + "/wd/hub"), cap, TimeSpan.FromSeconds(600));
+
+
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(15));
+
+
             return driver;
         }
     }

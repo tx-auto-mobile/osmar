@@ -23,18 +23,37 @@ namespace AccuWeather
         StepsToSetUpDevice stepSetUpDevice;
         StepsToTermsAndConditions stepTermConditions;
         string appActivityTermsConditions;// = "com.accuweather.app.SplashScreen";
+        string sauceLabs;
 
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            readCsv = new ReadCsvs();
+            stepSetUpDevice = new StepsToSetUpDevice();
+            appActivityTermsConditions = readCsv.read_android_activities()["termAndConditions"];
+            sauceLabs = readCsv.readCapabilities()[6].ToLower();
+
+            if (sauceLabs.Equals("no"))
+            {
+                driver = stepSetUpDevice.run_driver_with_install_one_time("", appActivityTermsConditions);
+                driver.Quit();
+
+            }
+        }
 
         [SetUp]
         public void setUp()
         {
             String testCaseName = TestContext.CurrentContext.Test.Name;
-            readCsv = new ReadCsvs();
-            appActivityTermsConditions = readCsv.read_android_activities()["termAndConditions"];
 
-
-            stepSetUpDevice = new StepsToSetUpDevice();
-            driver = stepSetUpDevice.run_driver_with_install(testCaseName, appActivityTermsConditions);
+            if (sauceLabs.Equals("yes"))
+            {
+                driver = stepSetUpDevice.run_driver_with_install_every_time(testCaseName, appActivityTermsConditions);
+            }
+            else
+            {
+                driver = stepSetUpDevice.run_driver_without_install(testCaseName, appActivityTermsConditions);
+            }
             stepTermConditions = new StepsToTermsAndConditions(driver);
             
         }
@@ -107,6 +126,11 @@ namespace AccuWeather
             }
 
 
+        }
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            driver.Quit();
         }
 
     }

@@ -23,3 +23,28 @@ C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\StepsDefinitionTests\bin\De
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\StepsDefinitionTests\obj\Debug\StepsDefinitionTests.csprojResolveAssemblyReference.cache
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\StepsDefinitionTests\obj\Debug\StepsDefinitionTests.dll
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\StepsDefinitionTests\obj\Debug\StepsDefinitionTests.pdb
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\AndroidActivities\Activities.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\AndroidComponentsByScreen\AddLocationScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\AndroidComponentsByScreen\EditLocationScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\AndroidComponentsByScreen\MenuOptionsScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\AndroidComponentsByScreen\TermAndConditionsScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\Configurations\AppiumConfiguration.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\Configurations\Capabilities.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\CsvFiles\Configurations\SauceLabsConfiguration.csv
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\StepsDefinitionTests.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\StepsDefinitionTests.pdb
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\appium-dotnet-driver.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\Castle.Core.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\Newtonsoft.Json.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\ReadCsvFiles.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\WebDriver.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\WebDriver.Support.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\ReadCsvFiles.pdb
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\appium-dotnet-driver.xml
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\Castle.Core.xml
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\Newtonsoft.Json.xml
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\WebDriver.xml
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\bin\Debug\WebDriver.Support.xml
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\obj\Debug\StepsDefinitionTests.csprojResolveAssemblyReference.cache
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\obj\Debug\StepsDefinitionTests.dll
+D:\New Project\Code\osmar-master\AccuWeather\StepsDefinitionTests\obj\Debug\StepsDefinitionTests.pdb

@@ -11,3 +11,15 @@ C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\bin\Debug\Read
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.csprojResolveAssemblyReference.cache
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.dll
 C:\Users\osmar.garcia\Source\Repos\osmar\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.pdb
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\AndroidActivities\Activities.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\AndroidComponentsByScreen\AddLocationScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\AndroidComponentsByScreen\EditLocationScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\AndroidComponentsByScreen\MenuOptionsScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\AndroidComponentsByScreen\TermAndConditionsScreen.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\Configurations\AppiumConfiguration.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\Configurations\Capabilities.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\CsvFiles\Configurations\SauceLabsConfiguration.csv
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\ReadCsvFiles.dll
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\bin\Debug\ReadCsvFiles.pdb
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.dll
+D:\New Project\Code\osmar-master\AccuWeather\ReadCsvFiles\obj\Debug\ReadCsvFiles.pdb

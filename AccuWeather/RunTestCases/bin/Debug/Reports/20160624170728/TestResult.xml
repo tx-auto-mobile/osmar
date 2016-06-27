@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="32" result="Failed" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="8" engine-version="3.2.1.0" clr-version="2.0.50727.5420" start-time="2016-06-24 21:07:41Z" end-time="2016-06-24 21:12:29Z" duration="288.556879">
+  <command-line><![CDATA["D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\nunit3-console.exe" AccuWeather.dll --where "cat == EditLocation" --work="Reports\20160624170728" --wait]]></command-line>
+  <filter>
+    <cat>EditLocation</cat>
+  </filter>
+  <test-suite type="Assembly" id="0-1047" name="AccuWeather.dll" fullname="D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug\AccuWeather.dll" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2016-06-24 21:07:41Z" end-time="2016-06-24 21:12:29Z" duration="288.407909" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="8">
+    <environment framework-version="3.2.1.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="D:\New Project\Code\osmar-master\AccuWeather\RunTestCases\bin\Debug" machine-name="TXBOOGARCIA" user="osmar.garcia" user-domain="TRUEXTEND" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="WorkDirectory" value="Reports\20160624170728" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.5.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="_PID" value="8592" />
+      <property name="_APPDOMAIN" value="test-domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1048" name="AccuWeather" fullname="AccuWeather" runstate="Runnable" testcasecount="32" result="Failed" site="Child" start-time="2016-06-24 21:07:41Z" end-time="2016-06-24 21:12:29Z" duration="288.355146" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="8">
+      <properties />
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1012" name="TestEditLocation" fullname="AccuWeather.TestEditLocation" classname="AccuWeather.TestEditLocation" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2016-06-24 21:07:41Z" end-time="2016-06-24 21:12:29Z" duration="288.320114" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="8">
+        <properties>
+          <property name="ParallelScope" value="Self" />
+          <property name="Category" value="EditLocation" />
+        </properties>
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="ParameterizedMethod" id="0-1015" name="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" fullname="AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2016-06-24 21:07:41Z" end-time="2016-06-24 21:12:29Z" duration="288.310479" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="8">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1013" name="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Edit&quot;)" fullname="AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Edit&quot;)" methodname="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" classname="AccuWeather.TestEditLocation" runstate="Runnable" seed="212386315" result="Failed" start-time="2016-06-24 21:07:41Z" end-time="2016-06-24 21:10:18Z" duration="156.464048" asserts="2">
+            <properties />
+            <failure>
+              <message><![CDATA[  Edit Location button is not found
+  Expected: True
+  But was:  False
+]]></message>
+              <stack-trace><![CDATA[at AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(String screen) in D:\New Project\Code\osmar-master\AccuWeather\AccuWeather\TestEditLocation.cs:line 67
+]]></stack-trace>
+            </failure>
+          </test-case>
+          <test-case id="0-1014" name="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Menu&quot;)" fullname="AccuWeather.TestEditLocation.TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left(&quot;Menu&quot;)" methodname="TC015_Edit_Location_Delete_Location_When_It_Is_Swipped_Left" classname="AccuWeather.TestEditLocation" runstate="Runnable" seed="963478164" result="Passed" start-time="2016-06-24 21:10:18Z" end-time="2016-06-24 21:12:29Z" duration="131.812858" asserts="6">
+            <properties />
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

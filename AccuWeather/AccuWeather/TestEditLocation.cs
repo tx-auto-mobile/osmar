@@ -41,7 +41,7 @@ namespace AccuWeather
             appActivityMainScreen = readCsv.read_android_activities()["main"];
 
             stepSetUpDevice = new StepsToSetUpDevice();
-            driver = stepSetUpDevice.run_driver_with_install(testCaseName, appActivityMainScreen);
+            driver = stepSetUpDevice.run_driver_with_install_every_time(testCaseName, appActivityMainScreen);
             stepTermConditions = new StepsToTermsAndConditions(driver);
             //stepTermConditions.accept_termns_and_conditions();
             stepMenuOptions = new StepsToMenuOptions(driver);
